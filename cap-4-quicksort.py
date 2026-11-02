@@ -3,7 +3,7 @@ def quicksort(array):
         return array # caso base
     else:
         array_pivot = array[0] # caso recursivo
-        menor = [i for i in array[1:0] if i <= array_pivot]
+        menor = [i for i in array[1:] if i <= array_pivot]
         maior = [i for i in array[1:] if i > array_pivot]
         return quicksort(menor) + [array_pivot] + quicksort(maior)
 
